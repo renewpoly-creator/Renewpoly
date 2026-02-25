@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | RenewPoly</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+
+/* =======================
+   GLOBAL STYLES
+======================= */
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+  font-family:'Poppins',sans-serif;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:#f4f6fb;
+  color:#222;
+  line-height:1.7;
+  padding-top:90px;
+}
+
+/* =======================
+   NAVBAR
+======================= */
+nav{
+  position:fixed;
+  top:0;
+  width:100%;
+  background:white;
+  box-shadow:0 2px 10px rgba(0,0,0,.1);
+  z-index:1000;
+}
+
+.nav-container{
+  max-width:1100px;
+  margin:auto;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 20px;
+}
+
+.logo img{
+  height:50px;
+}
+
+.nav-links a{
+  margin-left:25px;
+  text-decoration:none;
+  color:#333;
+  font-weight:500;
+}
+
+.nav-links a:hover{
+  color:#04386A; /* updated blue */
+}
+
+/* =======================
+   CONTENT
+======================= */
+.container{
+  max-width:800px;
+  margin:auto;
+  padding:40px 20px;
+}
+
+.section-title{
+  text-align:center;
+  font-size:36px;
+  margin-bottom:20px;
+  color:#04386A; /* updated blue */
+}
+
+.section-intro{
+  text-align:center;
+  max-width:600px;
+  margin:0 auto 40px;
+  text-align: justify; /* text aligned both margins */
+  text-align-last: left; /* last line aligned left */
+}
+
+/* =======================
+   FORM
+======================= */
+.contact-form{
+  max-width:500px;
+  margin:0 auto 40px;
+}
+
+input, textarea{
+  width:100%;
+  padding:12px;
+  margin-bottom:15px;
+  border-radius:8px;
+  border:1px solid #ccc;
+  font-size:14px;
+}
+
+textarea{
+  resize:vertical;
+}
+
+button{
+  width:100%;
+  background:#04386A; /* updated blue */
+  color:white;
+  padding:12px;
+  border:none;
+  border-radius:8px;
+  font-size:16px;
+  cursor:pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover{
+  background:#022a4f; /* darker hover for consistency */
+}
+
+/* =======================
+   FOOTER
+======================= */
+footer{
+  background:#04386A; /* updated blue */
+  color:white;
+  text-align:center;
+  padding:25px;
+  margin-top:60px;
+}
+
+footer a{
+  color:white;
+  text-decoration:none;
+  margin:0 12px;
+  font-size:14px;
+}
+
+footer a:hover{
+  text-decoration:underline;
+}
+
+/* =======================
+   MOBILE
+======================= */
+@media(max-width:768px){
+  .nav-links a{
+    margin-left:12px;
+    font-size:14px;
+  }
+
+  .section-title{
+    font-size:28px;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+  <div class="nav-container">
+    <div class="logo">
+      <a href="index.html">
+        <img src="logo2.png" alt="RenewPolz Logo">
+      </a>
+    </div>
+
+    <div class="nav-links">
+      <a href="index.html#home">Home</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#products">Products</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#team">Team</a>
+      <a href="contact.html">Contact</a>
+      <a href="imprint.html">Imprint</a>
+      <a href="privacy.html">Privacy</a>
+    </div>
+  </div>
+</nav>
+
+<!-- CONTENT -->
+<div class="container">
+
+<h2 class="section-title">Contact</h2>
+
+<p class="section-intro">
+We welcome inquiries regarding partnerships, collaborations, and project opportunities.
+</p>
+
+<form class="contact-form">
+  <input type="text" placeholder="Your Name" required>
+  <input type="email" placeholder="Email Address" required>
+  <textarea rows="5" placeholder="Your Message"></textarea>
+  <button type="submit">Send Message</button>
+</form>
+
+<p class="section-intro">
+<strong>RenewPoly GmbH</strong><br>
+Lichtenbergstr. 4, 85748 Garching, Germany<br>
+Email: <a href="mailto:info@renewpoly.com" style="color:#04386A;">info@renewpoly.com</a><br>
+Phone: +49 176 7417 2736
+</p>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+<a href="contact.html">Contact</a>
+<a href="imprint.html">Imprint</a>
+<a href="privacy.html">Privacy Notice</a>
+</footer>
+
+</body>
+</html>
