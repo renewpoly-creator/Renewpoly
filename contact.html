@@ -200,11 +200,12 @@ footer a:hover{
 We welcome inquiries regarding partnerships, collaborations, and project opportunities.
 </p>
 
-<form class="contact-form">
-  <input type="text" placeholder="Your Name" required>
-  <input type="email" placeholder="Email Address" required>
-  <textarea rows="5" placeholder="Your Message"></textarea>
-  <button type="submit">Send Message</button>
+<form class="contact-form" action="send-message.php" method="POST">
+  <input type="text" name="name" placeholder="Ihr Name" required>
+  <input type="email" name="email" placeholder="E-Mail-Adresse" required>
+  <textarea name="message" rows="5" placeholder="Ihre Nachricht" required></textarea>
+  <input type="checkbox" name="consent" required> Ich stimme der Verarbeitung meiner Daten zu.<br><br>
+  <button type="submit">Absenden</button>
 </form>
 
 <p class="section-intro">
