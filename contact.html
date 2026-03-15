@@ -204,8 +204,11 @@ We welcome inquiries regarding partnerships, collaborations, and project opportu
   <input type="text" name="name" placeholder="Ihr Name" required>
   <input type="email" name="email" placeholder="E-Mail-Adresse" required>
   <textarea name="message" rows="5" placeholder="Ihre Nachricht" required></textarea>
-  <input type="checkbox" name="consent" required> Ich stimme der Verarbeitung meiner Daten zu.<br><br>
-  <button type="submit">Absenden</button>
+<label class="consent-box">
+  <input type="checkbox" name="consent" value="yes" required>
+  <span>Ich stimme der Verarbeitung meiner Daten gemäß der <a href="privacy.html">Datenschutzerklärung</a> zu.</span>
+</label>
+   <button type="submit">Absenden</button>
 </form>
 
 <p class="section-intro">
