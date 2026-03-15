@@ -23,7 +23,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         exit;
     }
 
-    // Protect against header injection
     $name = str_replace(["\r", "\n"], ' ', $name);
     $email = str_replace(["\r", "\n"], '', $email);
 
