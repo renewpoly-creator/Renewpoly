@@ -8,36 +8,43 @@
   <link rel="stylesheet" href="style.css">
 
   <!-- TEMPORARY TEST STYLE: Force native checkbox to show on deployed site -->
-  <style>
-    .consent-box input[type="checkbox"] {
-      opacity: 1 !important;
-      position: static !important;
-      width: 16px !important;   /* or auto */
-      height: 16px !important;
-      margin: 0 8px 0 0 !important;  /* space between box and text */
-      vertical-align: middle !important;
-      accent-color: #04386A;    /* matches your brand color from the page */
-      display: inline-block !important;
-      appearance: auto !important;   /* reset any none/erase */
-    }
+  <!-- STRONGER TEMP TEST STYLE: Make checkbox super obvious -->
+<style>
+  .consent-box input[type="checkbox"] {
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: inline-block !important;
+    position: static !important;
+    width: 24px !important;
+    height: 24px !important;
+    min-width: 24px !important;
+    min-height: 24px !important;
+    margin: 0 12px 0 0 !important;
+    border: 3px solid red !important;          /* bright red border to spot it */
+    background-color: white !important;
+    accent-color: #ff0000 !important;          /* red check when ticked */
+    appearance: auto !important;
+    box-shadow: 0 0 10px red !important;       /* glow if still hidden */
+  }
 
-    /* Hide any fake/decorative checkbox that might be covering it */
-    .consent-box span::before,
-    .consent-box span::after,
-    .consent-box label::before,
-    .consent-box label::after {
-      display: none !important;
-    }
+  /* Nuke any possible hiding pseudo-elements or overrides */
+  .consent-box *::before,
+  .consent-box *::after,
+  input[type="checkbox"]::before,
+  input[type="checkbox"]::after {
+    display: none !important;
+    content: none !important;
+  }
 
-    /* Ensure the whole label is clickable and visible */
-    .consent-box {
-      display: flex !important;
-      align-items: center !important;
-      gap: 8px !important;
-      margin: 16px 0 !important;
-      cursor: pointer !important;
-    }
-  </style>
+  .consent-box {
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+    margin: 20px 0 !important;
+    min-height: 30px !important;
+    border: 1px dashed orange !important;     /* orange outline around whole label for debugging */
+  }
+</style>
 </head>
 <body>
   <!-- NAVIGATION -->
