@@ -17,3 +17,23 @@ ul { margin-left:20px; margin-bottom:15px; }
 a { color:#4f46e5; text-decoration:none; }
 a:hover { text-decoration:underline; }
 hr { border:none; border-top:1px solid #ccc; margin:30px 0; }
+
+.consent-box{
+  display:flex;
+  align-items:flex-start;
+  gap:10px;
+  font-size:14px;
+  margin-bottom:20px;
+  line-height:1.5;
+}
+
+.consent-box input{
+  width:auto;
+  margin-top:4px;
+  margin-bottom:0;
+}
+
+.consent-box a{
+  color:#04386A;
+  text-decoration:underline;
+}
