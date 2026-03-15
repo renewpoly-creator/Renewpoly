@@ -4,12 +4,42 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact | RenewPoly</title>
-
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+
+  <!-- TEMPORARY TEST STYLE: Force native checkbox to show on deployed site -->
+  <style>
+    .consent-box input[type="checkbox"] {
+      opacity: 1 !important;
+      position: static !important;
+      width: 16px !important;   /* or auto */
+      height: 16px !important;
+      margin: 0 8px 0 0 !important;  /* space between box and text */
+      vertical-align: middle !important;
+      accent-color: #04386A;    /* matches your brand color from the page */
+      display: inline-block !important;
+      appearance: auto !important;   /* reset any none/erase */
+    }
+
+    /* Hide any fake/decorative checkbox that might be covering it */
+    .consent-box span::before,
+    .consent-box span::after,
+    .consent-box label::before,
+    .consent-box label::after {
+      display: none !important;
+    }
+
+    /* Ensure the whole label is clickable and visible */
+    .consent-box {
+      display: flex !important;
+      align-items: center !important;
+      gap: 8px !important;
+      margin: 16px 0 !important;
+      cursor: pointer !important;
+    }
+  </style>
 </head>
 <body>
-
   <!-- NAVIGATION -->
   <nav>
     <div class="nav-container">
@@ -18,7 +48,6 @@
           <img src="logo2.png" alt="RenewPoly Logo">
         </a>
       </div>
-
       <div class="nav-links">
         <a href="index.html#home">Home</a>
         <a href="index.html#about">About</a>
@@ -31,20 +60,16 @@
       </div>
     </div>
   </nav>
-
   <!-- CONTENT -->
   <div class="container">
     <h2 class="section-title">Contact</h2>
-
     <p class="section-intro">
       We welcome inquiries regarding partnerships, collaborations, and project opportunities.
     </p>
-
     <form class="contact-form" action="send-message.php" method="POST">
       <input type="text" name="name" placeholder="Ihr Name" required>
       <input type="email" name="email" placeholder="E-Mail-Adresse" required>
       <textarea name="message" rows="5" placeholder="Ihre Nachricht" required></textarea>
-
       <label class="consent-box">
         <input type="checkbox" name="consent" value="yes" required>
         <span>
@@ -52,10 +77,8 @@
           <a href="privacy.html">Datenschutzerklärung</a> zu.
         </span>
       </label>
-
       <button type="submit">Absenden</button>
     </form>
-
     <p class="section-intro">
       <strong>RenewPoly GmbH</strong><br>
       Lichtenbergstr. 4, 85748 Garching, Germany<br>
@@ -63,13 +86,11 @@
       Phone: +49 176 7417 2736
     </p>
   </div>
-
   <!-- FOOTER -->
   <footer>
     <a href="contact.html">Contact</a>
     <a href="imprint.html">Imprint</a>
     <a href="privacy.html">Privacy Notice</a>
   </footer>
-
 </body>
 </html>
