@@ -1,17 +1,29 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $to = "info@renewpoly.com"; // Your email
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    $to = "info@renewpoly.com";
     $subject = "Neue Nachricht vom Kontaktformular";
 
-    // Sanitize inputs
-    $name = htmlspecialchars($_POST['name']);
-    $email = htmlspecialchars($_POST['email']);
-    $message = htmlspecialchars($_POST['message']);
+    $name = trim($_POST['name'] ?? '');
+    $email = trim($_POST['email'] ?? '');
+    $message = trim($_POST['message'] ?? '');
 
-    $body = "Name: $name\nE-Mail: $email\nNachricht:\n$message";
+    if (empty($name) || empty($email) || empty($message)) {
+        echo "Bitte alle Felder ausfüllen.";
+        exit;
+    }
 
-    $headers = "From: $email\r\n";
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        echo "Ungültige E-Mail-Adresse.";
+        exit;
+    }
+
+    $body = "Name: $name\n";
+    $body .= "E-Mail: $email\n\n";
+    $body .= "Nachricht:\n$message";
+
+    $headers = "From: website@renewpoly.com\r\n";
     $headers .= "Reply-To: $email\r\n";
+    $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
 
     if (mail($to, $subject, $body, $headers)) {
         echo "Nachricht erfolgreich gesendet!";
